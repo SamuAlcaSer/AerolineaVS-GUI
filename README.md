@@ -3,6 +3,8 @@ Proyecto Aerolínea con Visual Studio Code + Maven + GitHub.
 
 ## Requisitos implementados
 - CLI en Java para recomendar la tarifa más adecuada según reglas de negocio.
+- Reglas de negocio desacopladas de la interfaz mediante `IPricingService` y `PricingServiceImpl`.
+- Interfaz gráfica de escritorio Swing para consultar tarifas.
 - Gestión con Maven.
 - Tests con JUnit 5 y ejecución con Surefire.
 - Cobertura con JaCoCo.
@@ -26,6 +28,11 @@ mvn javadoc:javadoc
 ## Ejecutar la CLI
 ```bash
 mvn exec:java -Dexec.mainClass=com.aerolineavs.tarifas.App
+```
+
+## Ejecutar la interfaz gráfica
+```bash
+mvn exec:java -Dexec.mainClass=com.aerolineavs.tarifas.SwingApp
 ```
 
 ## Suposiciones para evitar ambigüedades
